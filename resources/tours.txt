@@ -1,0 +1,8 @@
+Ruta Gastronómica Puerto Varas;gastronómico;4;45000;Puerto Varas;Centro;Operador Sabores del Lago;+56 9 1111 2222
+Paseo Lago Llanquihue;lacustre;3;35000;Llanquihue;Costanera;Operador Lago Azul;+56 9 2222 3333
+Excursión Saltos del Petrohué;naturaleza;6;60000;Puerto Varas;Petrohué;Operador Ruta Verde;+56 9 3333 4444
+Tour Cultural Frutillar;cultural;5;50000;Frutillar;Teatro del Lago;Operador Patrimonio Sur;+56 9 4444 5555
+Experiencia Gastronómica Chiloé;gastronómico;8;85000;Castro;Centro Histórico;Operador Sabores Chilotes;+56 9 5555 6666
+Navegación Volcán Osorno;lacustre;4;55000;Puerto Varas;Ensenada;Operador Lagos y Volcanes;+56 9 6666 7777
+Circuito Artesanal Llanquihue;cultural;2;25000;Llanquihue;Plaza de Armas;Operador Cultura Local;+56 9 7777 8888
+Tour Fotográfico Lago Todos los Santos;naturaleza;7;70000;Puerto Varas;Parque Nacional Vicente Pérez Rosales;Operador Fototurismo Austral;+56 9 8888 9999

@@ -1,4 +1,11 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Java compiled files
 out/
 *.class
-.idea/workspace.xml
-.idea/tasks.xml
+
+# OS files
+.DS_Store
+Thumbs.db
