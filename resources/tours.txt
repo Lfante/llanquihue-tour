@@ -1,6 +1,0 @@
-Ruta Gastronómica Puerto Varas;gastronómico;4;45000
-Paseo Lago Llanquihue;lacustre;3;35000
-Excursión Saltos del Petrohué;naturaleza;6;60000
-Tour Cultural Frutillar;cultural;5;50000
-Experiencia Gastronómica Chiloé;gastronómico;8;85000
-Navegación Volcán Osorno;lacustre;4;55000
