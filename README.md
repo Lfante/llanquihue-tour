@@ -1,83 +1,78 @@
-# LlanquihueTourApp - Semana 5
+# LlanquihueTourApp - Semana 6
 
 ## Descripción
 
-Este proyecto corresponde a la actividad de Semana 5 de Desarrollo Orientado a Objetos I.
+Este proyecto corresponde a la actividad de Semana 6 de Desarrollo Orientado a Objetos I.
+El objetivo de esta semana es representar distintos servicios turísticos de Llanquihue Tour mediante una jerarquía de clases con herencia simple.
 
-El sistema representa una base de gestión para la agencia de turismo **Llanquihue Tour**. La aplicación lee datos desde el archivo `tours.txt`, crea objetos de tipo `Tour`, los almacena en una colección dinámica y permite realizar operaciones básicas como recorrido, búsqueda y filtrado.
+La solución define una clase base llamada `ServicioTuristico`, que contiene los atributos comunes de los servicios, y tres subclases que extienden su comportamiento: `RutaGastronomica`, `PaseoLacustre` y `ExcursionCultural`.
 
-En esta versión se mejora el proyecto anterior incorporando una estructura más modular, composición entre clases, validaciones básicas con `try-catch` y una librería personalizada para administrar el catálogo de tours.
+## Objetivo de la semana
+
+- Implementar una superclase con atributos comunes.
+- Crear subclases con atributos específicos.
+- Utilizar `super(...)` en los constructores de las subclases.
+- Sobrescribir el método `toString()` para mostrar información completa.
+- Crear objetos de prueba desde una clase gestora.
+- Ejecutar el programa desde `Main` y mostrar los resultados por consola.
 
 ## Estructura del proyecto
 
 ```text
-LlanquihueTourApp/
-├── src/
-│   ├── model/
-│   │   ├── Tour.java
-│   │   ├── Ubicacion.java
-│   │   └── OperadorTuristico.java
-│   ├── data/
-│   │   └── GestorDatos.java
-│   ├── service/
-│   │   └── CatalogoTours.java
-│   ├── util/
-│   │   └── ValidadorDatos.java
-│   └── ui/
-│       └── Main.java
-├── resources/
-│   └── tours.txt
-├── README.md
-└── .gitignore
+src/
+├── model/
+│   ├── ServicioTuristico.java
+│   ├── RutaGastronomica.java
+│   ├── PaseoLacustre.java
+│   └── ExcursionCultural.java
+├── data/
+│   └── GestorServicios.java
+└── ui/
+    └── Main.java
 ```
 
-## Paquetes utilizados
+El proyecto mantiene otros archivos de semanas anteriores, pero para esta actividad los archivos principales son los relacionados con la jerarquía de servicios turísticos.
 
-- `model`: contiene las clases principales del dominio.
-- `data`: contiene la clase encargada de leer archivos externos.
-- `service`: contiene la librería personalizada para administrar el catálogo de tours.
-- `util`: contiene utilidades de validación y conversión de datos.
-- `ui`: contiene la clase principal `Main`, desde donde se ejecuta el sistema.
+## Clases creadas
 
-## Clases implementadas
+### ServicioTuristico
+Clase base o superclase. Contiene los atributos comunes:
 
-- `Tour`: representa un tour ofrecido por Llanquihue Tour.
-- `Ubicacion`: representa la ubicación del tour. Se usa como composición dentro de `Tour`.
-- `OperadorTuristico`: representa al operador responsable del tour. También se usa como composición dentro de `Tour`.
-- `GestorDatos`: lee el archivo `tours.txt`, separa los campos con `split(";")` y crea objetos `Tour`.
-- `CatalogoTours`: librería personalizada que encapsula un `ArrayList<Tour>` y ofrece métodos para agregar, listar, buscar y filtrar tours.
-- `ValidadorDatos`: clase utilitaria que aplica validaciones simples con `try-catch`.
-- `Main`: ejecuta la carga de datos, muestra todos los registros y aplica filtros por consola.
+- `nombre`
+- `duracionHoras`
 
-## Formato del archivo tours.txt
+### RutaGastronomica
+Subclase que hereda de `ServicioTuristico`. Agrega el atributo:
 
-Cada línea debe tener 8 campos separados por punto y coma:
+- `numeroDeParadas`
 
-```text
-nombre;tipo;duracionHoras;precioPorPersona;ciudad;sector;operador;telefonoOperador
-```
+### PaseoLacustre
+Subclase que hereda de `ServicioTuristico`. Agrega el atributo:
 
-Ejemplo:
+- `tipoEmbarcacion`
 
-```text
-Ruta Gastronómica Puerto Varas;gastronómico;4;45000;Puerto Varas;Centro;Operador Sabores del Lago;+56 9 1111 2222
-```
+### ExcursionCultural
+Subclase que hereda de `ServicioTuristico`. Agrega el atributo:
+
+- `lugarHistorico`
+
+### GestorServicios
+Clase ubicada en el paquete `data`. Crea al menos dos objetos de cada subclase para probar el funcionamiento de la jerarquía.
+
+### Main
+Clase principal ubicada en el paquete `ui`. Ejecuta el programa y muestra por consola los servicios creados.
 
 ## Instrucciones para ejecutar
 
 1. Abrir el proyecto en IntelliJ IDEA.
-2. Confirmar que el archivo `tours.txt` esté ubicado en la carpeta `resources`.
-3. Ejecutar la clase `Main`, ubicada en:
+2. Verificar que las clases estén dentro de los paquetes `model`, `data` y `ui`.
+3. Ejecutar la clase:
 
 ```text
 src/ui/Main.java
 ```
 
-4. Revisar la salida por consola. El sistema mostrará:
-   - catálogo completo de tours;
-   - tours filtrados por tipo gastronómico;
-   - búsqueda de tours que contienen la palabra "Lago";
-   - tours con precio máximo de $55.000 por persona.
+4. Revisar la consola. El programa debe mostrar dos rutas gastronómicas, dos paseos lacustres y dos excursiones culturales.
 
 ## Autor
 
